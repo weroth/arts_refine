@@ -1,0 +1,25 @@
+
+<%= render "/refinery/banner" %>
+
+<!-- Main Page Content and Sidebar -->
+ 
+  <div class="row">
+ 
+    <!-- Main Blog Content -->
+    <div class="large-9 columns" role="content">
+ 
+      <article>
+		<section id='body'>
+		  <%=raw @page.content_for(:body) %>
+		</section>
+			
+		<% @items = Refinery::News::Item.latest(5) %>
+		<%= render :partial => '/refinery/news/items/recent_posts' %>
+		
+	  </article>
+ 
+    </div>
+ 
+    <!-- End Main Content -->
+
+<%= render "/refinery/sidebar" %>
