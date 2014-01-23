@@ -16,3 +16,19 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+// Trigger loading probar bar after clicking links
+$('a').on('click', function(e) {
+    //only add probar bar if added yet.
+    if ($("#probar").length === 0) {
+        $("body").append($("<div><dt/><dd/></div>").attr("id", "probar"));
+        $("#probar").width((50 + Math.random() * 30) + "%");
+    }
+});
+
+$(document).ajaxComplete(function() {
+    //End loading animation
+    $("#probar").width("101%").delay(200).fadeOut(400, function() {
+        $(this).remove();
+    });
+});
