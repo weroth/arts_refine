@@ -10,18 +10,23 @@
 // Orbit
 $include-html-orbit-classes: $include-html-classes;
 
-.orbit-container {
-  background: red;
-}
+// Headline banner
 
-.orbit-slides-container {
+.headline li div{  
+  padding: 30px 40px;
   background: #0092AA;
+  
+  h2, h3 {
+    color: white;
+  }
+//  width: 100%;
+//  overflow: hidden;
 }
 
 // We use these to control the caption styles
-$orbit-container-bg: #15f5f5;
+// $orbit-container-bg: #15f5f5;
  $orbit-caption-bg: rgba(51,51,51, 0.8);
- $orbit-caption-font-color: #fff;
+// $orbit-caption-font-color: #fff;
  $orbit-caption-font-size: rem-calc(14);
  $orbit-caption-position: "bottom"; // Supported values: "bottom", "under"
  $orbit-caption-padding: rem-calc(10 14);
