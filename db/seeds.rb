@@ -11,3 +11,6 @@ Refinery::Pages::Engine.load_seed
 
 # Added by Refinery CMS News engine
 Refinery::News::Engine.load_seed
+
+# Added by Refinery CMS Tweets engine
+Refinery::Tweets::Engine.load_seed

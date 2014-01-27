@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140120122636) do
+ActiveRecord::Schema.define(:version => 20140127124852) do
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
@@ -149,6 +149,15 @@ ActiveRecord::Schema.define(:version => 20140120122636) do
   end
 
   add_index "refinery_settings", ["name"], :name => "index_refinery_settings_on_name"
+
+  create_table "refinery_tweets_twitter_accounts", :force => true do |t|
+    t.string   "username"
+    t.integer  "tweet_count", :default => 5
+    t.string   "widget_id"
+    t.boolean  "visible",     :default => true
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+  end
 
   create_table "refinery_user_plugins", :force => true do |t|
     t.integer "user_id"
